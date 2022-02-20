@@ -1,11 +1,10 @@
 import { NextPage } from "next"
 import { GithubJob } from "../lib/api"
 import { getData } from "./api";
+import { Layout } from "../components/layout";
 const Home: NextPage<GithubJob[]> = (props) => {
 
-  return (
-    <h1>Github Jobs</h1>
-  )
+  return <Layout title="Home">Home page works!</Layout>;
 }
 export async function getServerSideProps() {
   try {
