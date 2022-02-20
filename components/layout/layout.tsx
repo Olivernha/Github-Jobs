@@ -4,7 +4,6 @@ import css from "./layout.module.css";
 import React from 'react'
 interface LayoutProps {
     title: string;
-
 }
 export const Layout: NextPage<LayoutProps> = ({ title, children }) => {
     return (
