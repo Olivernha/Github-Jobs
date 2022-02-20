@@ -47,4 +47,5 @@
     color: white;
     padding: 1.5rem 3rem;
     text-transform: uppercase;
+    cursor: pointer;
   }
