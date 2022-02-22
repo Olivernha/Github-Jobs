@@ -21,7 +21,7 @@ export const JobCard: NextPage<JobCardProps> = ({
 
 }) => {
     return (
-        <Link href={`/page/${id}`} passHref>
+        <Link href={`/job/${id}`} passHref>
             <div className={css.card}>
 
                 <JobImage src={company_logo} alt={company_name} size={90} />

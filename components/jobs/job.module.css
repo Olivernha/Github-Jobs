@@ -1,64 +1,113 @@
 .card {
-    width: 100%;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    display: flex;
-    margin: 1rem 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  margin: 1rem 0;
+}
+
+.info {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.info h2 {
+  font-family: "Roboto";
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.info-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-type {
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 0.5rem 0.3rem;
+}
+
+.icon-line {
+  color: var(--gray);
+  font-size: 0.8rem;
+  display: flex;
+}
+
+.icon-line svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.image-container {
+  display: flex;
+  margin: 0.75rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  align-self: center;
+}
+
+.image-placeholder {
+  font-family: "Roboto";
+  background-color: var(--bg);
+  color: #bdbdbd;
+  width: 100%;
+  text-align: center;
+}
+
+.apply {
+  min-width: 20%;
+  margin-right: 3rem;
+}
+
+.apply-header {
+  text-transform: uppercase;
+  color: var(--gray);
+  font-family: "Poppins";
+  font-weight: bold;
+  line-height: 0.75;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title-line {
+    flex-direction: column;
+    align-items: start;
   }
-  
-  .info {
-    width: 100%;
-    padding: 0.5rem 1rem;
+}
+
+.title-line h2 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sub-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.job-description {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .job-description {
+    flex-direction: column;
   }
-  
-  .info h2 {
-    font-family: "Roboto";
-    font-size: 0.75rem;
-    font-weight: bold;
-  }
-  
-  .info-line {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .job-type {
-    border: 1px solid var(--text);
-    border-radius: 4px;
-    font-weight: bold;
-    padding: 0.5rem 0.3rem;
-  }
-  
-  .icon-line {
-    color: var(--gray);
-    font-size: 0.8rem;
-    display: flex;
-  }
-  
-  .icon-line svg {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.5rem;
-  }
-  
-  .image-container {
-    display: flex;
-    margin: 0.75rem;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    align-self: center;
-  }
-  
-  .image-placeholder {
-    font-family: "Roboto";
-    background-color: var(--bg);
-    color: #bdbdbd;
-    width: 100%;
-    text-align: center;
-  }
+}

@@ -4,12 +4,11 @@ import {API_URL } from '../../lib/api'
 
 export async function getData() {
   try{
-    const data = await fetch(`${API_URL}`,{
+    const data = await fetch(`${API_URL}?limit=5`,{
       method: 'GET',
       headers: {
         'content-type': 'application/json',
-        'x-rapidapi-host': 'arbeitnow-free-job-board.p.rapidapi.com',
-        'x-rapidapi-key': '1b4eb114f3mshcdc85c03b9a5a3ep12d7cdjsn9b78168c2d09'
+
       }
     });
     const jsonData = await data.json();
