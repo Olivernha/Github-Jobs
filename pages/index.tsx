@@ -16,7 +16,8 @@ export async function getServerSideProps() {
   try {
     const dataJson = await getData();
     const jobs = await dataJson.jobs;
-
+    console.log(jobs);
+    
     return {
       props: {
         jobs: jobs
