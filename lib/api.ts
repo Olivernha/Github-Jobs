@@ -1,14 +1,15 @@
 export const API_URL =
-  "https://arbeitnow-free-job-board.p.rapidapi.com/api/job-board-api";
+  "https://remotive.io/api/remote-jobs";
 export interface GithubJob {
-  slug: string;
-  company_name: string;
-  created_at: string;
-  description: string;
-  job_types: string[];
-  tags: string[];
+  id: string;
+  job_type: string;
   url: string;
-  location: string;
+  tags:string[];
+  candidate_required_location: string;
+  publication_date: string;
+  company_name: string;
   title: string;
-  remote: boolean;
+  description: string;
+  salary: string;
+  company_logo: string;
 }

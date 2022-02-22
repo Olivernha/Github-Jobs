@@ -1,7 +1,8 @@
 export const fromToday = (d: string): string => {
+
   const day = 24 * 60 * 60 * 1000;
   const now: any = new Date();
-  const date: any = new Date(d);
+  const date: any = new Date(d).getSeconds();
   const timeDiff = now - date;
   const dayDiff = Math.round(timeDiff / day);
   if (dayDiff === 1) {

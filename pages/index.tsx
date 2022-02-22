@@ -8,14 +8,14 @@ interface HomeProps {
 }
 const Home: NextPage<HomeProps> = (props) => {
 
-  return <Layout title="Home">{props.jobs.map((job, key) => (
-    <JobCard key={key} {...job} />
+  return <Layout title="Home">{props.jobs.map((job) => (
+    <JobCard key={job.id} {...job} />
   ))}</Layout>;
 }
 export async function getServerSideProps() {
   try {
     const dataJson = await getData();
-    const jobs = await dataJson.data;
+    const jobs = await dataJson.jobs;
 
     return {
       props: {

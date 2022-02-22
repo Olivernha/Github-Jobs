@@ -7,35 +7,36 @@ import { GithubJob } from "../../lib/api";
 import { fromToday } from "../../lib/date";
 import { JobImage } from "./job-image";
 
-export interface JobCardProps extends GithubJob { }{
+export interface JobCardProps extends GithubJob {
 
 }
 export const JobCard: NextPage<JobCardProps> = ({
     company_name,
-    slug,
-    job_types,
+    id,
+    job_type,
     title,
-    location,
-    created_at,
+    candidate_required_location,
+    publication_date,
+    company_logo,
 
 }) => {
     return (
-        <Link href={`/page/${slug}`} passHref>
+        <Link href={`/page/${id}`} passHref>
             <div className={css.card}>
-           
-            <JobImage src={'https://via.placeholder.com/500'} alt={company_name} size={90} />
-             <div className={css.info}>
+
+                <JobImage src={company_logo} alt={company_name} size={90} />
+                <div className={css.info}>
                     <h2>{company_name}</h2>
                     <h3>{title}</h3>
                     <div className={css["info-line"]}>
-                    {job_types.length === 0 && <span className={css["job-type"]}>No Type yet</span>}
-                        {job_types.length > 0 && <span className={css["job-type"]}>{job_types.map(t => t.replace(/./, c => c.toUpperCase()) + '  ')}</span>}
+                        {job_type.length > 0 && <span className={css["job-type"]}>{job_type}</span>}
+
                         <div className={css["icon-line"]}>
                             <span>
-                                <GlobeIcon /> {location}
+                                <GlobeIcon /> {candidate_required_location}
                             </span>
                             <span style={{ marginLeft: "1rem" }}>
-                                <ClockIcon /> {fromToday(created_at)}
+                                <ClockIcon /> {fromToday(publication_date)}
                             </span>
                         </div>
                     </div>
