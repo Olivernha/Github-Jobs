@@ -34,6 +34,9 @@ export const getServerSideProps = async (context: any) => {
     const data = await getData();
     const jobData = await data.jobs;
     const job = await jobData.filter((j: GithubJob) => +j.id === +id)[0];
+    if(!job) {
+      return { props: { job: {}, redirect: true } };
+    }
     return { props: { job: job, redirect: false } };
   } catch (err) {
     return { props: { job: {}, redirect: true } };

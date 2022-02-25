@@ -12,4 +12,5 @@ export interface GithubJob {
   description: string;
   salary: string;
   company_logo: string;
+  category: string;
 }
