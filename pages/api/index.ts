@@ -4,7 +4,7 @@ import { API_URL } from "../../lib/api";
 
 export async function getData() {
   try {
-    const data = await fetch(`${API_URL}?limit=20`);
+    const data = await fetch(`${API_URL}?limit=50`);
     const jsonData = await data.json();
     return jsonData;
   } catch (err) {

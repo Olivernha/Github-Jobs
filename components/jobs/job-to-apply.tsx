@@ -8,8 +8,8 @@ export interface JobToApplyProps {
 }
 
 export const JobToApply: React.FC<JobToApplyProps> = ({link }) => (
-  <div className={css.apply}>
-    <Link href="/">
+  <div className={css.apply} >
+    <Link href="/" >
       <a>
         <ArrowIcon /> Back to search
       </a>

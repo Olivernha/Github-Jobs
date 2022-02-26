@@ -39,11 +39,11 @@ const Home: NextPage<HomeProps> = (props) => {
     if (e) {
       setType(e);
       console.log('type true');
-      setJobs(props.jobs.filter(job => job.job_type === 'full_time').slice(page * pageSize - pageSize, page * pageSize - pageSize + pageSize));
+      setJobs(props.jobs.filter(job => job.job_type === 'full_time'));
     } else {
       setType(e);
       console.log('type false');
-      setJobs(props.jobs.filter(job => job.job_type === 'full_time').slice(page * pageSize - pageSize, page * pageSize - pageSize + pageSize));
+      setJobs(props.jobs);
       // setJobs(jobs.slice(startIndex, startIndex + pageSize));
     }
   }

@@ -21,7 +21,7 @@ export const JobCard: NextPage<JobCardProps> = ({
 
 }) => {
     return (
-        <Link href={`/job/${id}`} passHref>
+        <Link href={`/job/${id}`} passHref >
             <div className={css.card}>
 
                 <JobImage src={company_logo} alt={company_name} size={90} />
@@ -32,10 +32,10 @@ export const JobCard: NextPage<JobCardProps> = ({
                         {job_type.length > 0 && <span className={css["job-type"]}>{job_type}</span>}
 
                         <div className={css["icon-line"]}>
-                            <span>
+                            <span className={css["align-text"]}>
                                 <GlobeIcon /> {candidate_required_location}
                             </span>
-                            <span style={{ marginLeft: "1rem" }}>
+                            <span  className={css["align-text"]} style={{ marginLeft: "1rem" }}>
                                 <ClockIcon /> {fromToday(publication_date)}
                             </span>
                         </div>
