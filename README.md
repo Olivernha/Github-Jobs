@@ -2,7 +2,7 @@
 
 Solution for a challenge from [Devchallenges.io](https://devchallenges.io/).
 
-
+[Demo](https://github-jobs-ruby-kappa.vercel.app/) | [Challenge](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps)
 
 ### Built With
 
