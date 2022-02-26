@@ -29,6 +29,7 @@ export const SearchLocation: NextPage<SearchLocationProps> = ({
         <input
           type="text"
           value={value}
+          placeholder="City,state,zip code or country"
           onChange={(e) => setValue(e.target.value)}
         />
       </div>

@@ -75,3 +75,7 @@
   position: relative;
   width: 100%;
 }
+.location-input input::placeholder{
+  color:var(--gray);
+  font-size: small;
+}
